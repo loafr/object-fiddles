@@ -143,22 +143,23 @@ var user = {
 that each value is truthy. If it's not truthy, remove it from the object. */
 
 for (key in user) {
-  if(key === 0) {
-    delete key;
+  if(user[key]) {
+    continue;
+  } else {
+    delete user[key];
   }
 }
+
 
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you 
 //(name: 'your name', username: 'your username'), rather than my information.
 
-  //Code Here
-
-
+user.name = "Logan";
+user.username = "lrobins";
+user.age = 28;
 
 
 //NEXT PROBLEM
-
-
 
 
 var user = {
@@ -175,11 +176,12 @@ var user = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  //Code Here
+user.name = 'Tyler S. McGinnis';
+user.email = 'tyler.mcginnis@devmounta.in';
 
 //Now call the sayName method that's on the user object which will alert the users email
 
-  //Code Here
+user.sayName();
 
 
 
